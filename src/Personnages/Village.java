@@ -9,10 +9,15 @@ public class Village {
 	public Village(String nom,int nbvillageoisMaximum) {
 	this.nom = nom;
 	}
+	
 	public void setChef(Chef chef) {
 	this.chef = chef;
 	}
+	
 	public String getNom() {
 	return nom;
+	}
+	public static void main(String[] args) {
+		
 	}
 }
