@@ -19,7 +19,6 @@ public class Scenario {
         asterix.frapper(minus);
         asterix.frapper(minus);
 
-
     }
 
 }

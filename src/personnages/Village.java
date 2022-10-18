@@ -7,7 +7,20 @@ public class Village {
 	private Chef chef;
 	
 	public Village(String nom,int nbvillageoisMaximum) {
-	this.nom = nom;
+		this.nom = nom;
+		villageois = new Gaulois[nbvillageoisMaximum];
+	}
+	
+	public void ajouterHabitant(Gaulois  gauloisAAjouter) {
+		if (nbvillageois < villageois.length){
+			villageois[nbvillageois] = gauloisAAjouter;
+				nbvillageois++;
+		}
+	}
+	
+	public Gaulois trouverHabitant(int numVillageois) {
+		Gaulois gaulois =villageois[numVillageois];
+		 return gaulois;
 	}
 	
 	public void setChef(Chef chef) {

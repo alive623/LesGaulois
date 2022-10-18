@@ -17,7 +17,7 @@ public class Druide {
         intro("Bonjour, je suis le Druide " + nom + " et ma potion peut aller d'une force " + effetPotionMin + "à" + effetPotionMax + ".");
     }
 
-    public static int preparerPotion() {
+    public  int preparerPotion() {
         Random i = new Random();
         return i.nextInt(effetPotionMax - effetPotionMin) + effetPotionMin;
 
@@ -32,7 +32,7 @@ public class Druide {
         return nom;
     }
 
-    public static void parler(int i) {
+    public  void parler(int i) {
         if (i>=7) {
             System.out.println(prendreParole() + "J'ai préparé une super potion de force " + i);
 
@@ -44,7 +44,7 @@ public class Druide {
 
     }
 
-    private static String prendreParole() {
+    private  String prendreParole() {
         return "Le druide " + nom + " : ";
     }
 
@@ -62,8 +62,8 @@ public class Druide {
 
     public static void main(String[] args) {
         Druide pano = new Druide("Panoramix", 5, 10);
-        int potion = preparerPotion();
-        parler(potion);
+        int potion = pano.preparerPotion();
+        pano.parler(potion);
 
     }
 
